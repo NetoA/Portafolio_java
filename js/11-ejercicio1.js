@@ -1,28 +1,18 @@
 'use strict'
+// ejercicio 1
+//programa que pida dos numeros y escriba el mayor el menor y si son iguales
 
-/*
-programa que nos pida 2 numeros y que nos diga cual es el mayor, el menor y si son iguales
-PLUS: Si los numeros no son un numero o son menores o iguales a cero, nos los vuelva a pedir 
-*/
+var numero1=parseInt(prompt('Digita tu primer numero',0));
+var numero2=parseInt(prompt('digita tu segundo numero',0));
 
-var numero1=parseInt(prompt('cual es tu primer numero', 0));
-var numero2=parseInt(prompt('cual es tu segundo numero', 0));
-
-console.log(numero1,numero2);
-while(numero1 <= 0 || numero2 <= 0 || isNaN(numero1) || isNaN(numero2) ){
- numero1=parseInt(prompt('cual es tu primer numero', 0));
- numero2=parseInt(prompt('cual es tu segundo numero', 0));
-}
-
-if(numero1 == numero2){
-	alert("Los numeros son iguales");
-
-}else if(numero1 > numero2){
-    alert("el mayor es el: " + numero1);
-    alert("el menor es el: " + numero2);
-}else if(numero2 > numero1){
-	 alert("el mayor es el: " + numero2);
-	 alert("el menor es el: " + numero1);
-}else{
-	alert("introduce numero correcto");
+while(numero1 >= 0 && numero2 >= 0){
+	if(numero1 >numero2){
+		console.log('numero1 = '+ numero1 + ' es mayor que numero2 = '+numero2);
+	}
+	if(numero2>numero1){
+		console.log('numero2 = '+ numero2 + '  mayor que numero1 = '+numero1);
+	}
+	else{
+		console.log('numero2 = '+ numero2 + 'es igual que numero1 = '+numero1);
+	}
 }
